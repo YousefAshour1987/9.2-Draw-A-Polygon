@@ -26,7 +26,7 @@ quad = {3: "triangle",
 pen = Turtle()
 pen.shape("turtle")
 pen.color("white")
-pen.speed(255)
+pen.speed(1)
 
 pen2 =Turtle()
 pen.ht()
@@ -76,6 +76,26 @@ while True:
                     pen.forward(120)
                     pen.left(60)
                     pen.forward(120)
-                    pen.left(180 - 60)
+                    pen.left(180-60)
                     pen.end_fill()
+            elif check == "Yes":
+                length = input("Are all 4 sides the same length? Yes/No: ")
+                if length == "No":
+                    for i in range(2):
+                        pen.begin_fill()
+                        pen2.write("This is a rectangle")
+                        pen.forward(100)
+                        pen.left(90)
+                        pen.forward(200)
+                        pen.left(180-90)
+                        pen.end_fill()
+                elif length == "Yes":
+                    pen.begin_fill()
+                    pen2.write("This is a square")
+                    for i in range(4):
+                        
+                        pen.forward(100)
+                        pen.left(90)
+                    pen.end_fill()
+                   
 screen.exitonclick()
